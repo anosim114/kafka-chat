@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+
+<script src="https://unpkg.com/htmx.org@1.9.10"></script>
+
+<p>hello world!</p>
+
+<form method="post" action="/messages" th:object="${newMessage}">
+  <input name="author" type="text" placeholder=author th:field=*{author}>
+  <input name="message" type="text" placeholder=message>
+  <input type="submit">
+</form>
+
+<div hx-get="/messages" hx-trigger="every 5s">
+</div>

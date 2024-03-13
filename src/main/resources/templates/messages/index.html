@@ -1,0 +1,8 @@
+<p>some data? :cry:</p>
+<div data-th-text="${messages.size()}"></div>
+<div data-th-each="message : ${messages}">
+  <p>
+    <strong>::author::</strong>
+    <th-block th:text="${message.message}"></th-block>
+  </p>
+</div>
